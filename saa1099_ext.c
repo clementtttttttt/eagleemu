@@ -1,7 +1,8 @@
 
-#include <SAASound.h>
+#include <stdbool.h>
 #include <stdint.h>
 #include <stdlib.h>
+#include <SAASound.h>
 
 static SAASND saahandle;
 

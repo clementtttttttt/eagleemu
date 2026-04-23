@@ -11,7 +11,7 @@
 #include <fcntl.h>
 #include "saa1099_ext.h"
 #include <SDL_mixer.h>
-#include <termio.h>
+#include <termios.h>
 #include "serial.h"
 // Window size
 #define WINDOW_WIDTH 640
