@@ -1,0 +1,37 @@
+org 0
+cpu 8086
+;cpu 186
+
+db "SG"
+dw end_f-start_f
+dw 0
+dw 0x100
+
+start_f:
+mov ax, 0xc000
+mov es, ax
+mov di, 0x13
+mov bx, 0x12
+mov ax, 0x100
+mov ds, ax
+
+mov byte [test], 0
+.loop:
+	mov byte [es:di], 0xf
+	mov al, [test]
+	mov byte [es:bx], al
+	not al
+	mov [test], al
+
+	imul ax
+
+	jmp .loop
+end_f:
+test: db 0
+
+align 2; align to boundary
+
+db "RN"
+dw start_f
+dw codeSeg
+            

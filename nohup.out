@@ -1,0 +1,48 @@
+
+(xfce4-panel:10616): Gtk-WARNING **: 13:38:39.236: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(xfce4-panel:10616): xfce4-panel-WARNING **: 13:38:39.240: Failed to connect to session manager: Failed to connect to the session manager: SESSION_MANAGER environment variable not defined
+
+(xfce4-panel:10616): Gtk-WARNING **: 13:38:39.298: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(xfce4-panel:10616): Gtk-WARNING **: 13:38:39.337: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(xfce4-panel:10616): Gtk-WARNING **: 13:38:39.342: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(xfce4-panel:10616): Gtk-WARNING **: 13:38:39.345: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(xfce4-panel:10616): Gtk-WARNING **: 13:38:39.357: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(xfce4-panel:10616): Gtk-WARNING **: 13:38:39.364: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10621): Gtk-WARNING **: 13:38:39.367: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10622): Gtk-WARNING **: 13:38:39.367: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(xfce4-panel:10616): Gtk-WARNING **: 13:38:39.369: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10623): Gtk-WARNING **: 13:38:39.369: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10636): Gtk-WARNING **: 13:38:39.380: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10622): Gtk-WARNING **: 13:38:39.423: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10636): Gtk-WARNING **: 13:38:39.427: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10623): Gtk-WARNING **: 13:38:39.428: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10621): Gtk-WARNING **: 13:38:39.429: Theme parsing error: gtk.css:39:45: Not using units is deprecated. Assuming 'px'.
+
+(wrapper-2.0:10636): libactions-WARNING **: 13:38:39.434: Calling CanShutdown failed GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.xfce.SessionManager was not provided by any .service files
+
+(wrapper-2.0:10636): libactions-WARNING **: 13:38:39.434: Calling CanRestart failed GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.xfce.SessionManager was not provided by any .service files
+
+(wrapper-2.0:10636): libactions-WARNING **: 13:38:39.434: Calling CanSuspend failed GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.xfce.SessionManager was not provided by any .service files
+
+(wrapper-2.0:10636): libactions-WARNING **: 13:38:39.435: Calling CanHibernate failed GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.xfce.SessionManager was not provided by any .service files
+
+(wrapper-2.0:10636): libactions-WARNING **: 13:38:39.435: Calling CanHybridSleep failed GDBus.Error:org.freedesktop.DBus.Error.ServiceUnknown: The name org.xfce.SessionManager was not provided by any .service files
+
+(wrapper-2.0:10621): pulseaudio-plugin-WARNING **: 13:39:16.636: Disconnected from the PulseAudio server. Attempting to reconnect in 5 seconds...
+Failed to create secure directory (/run/user/1000/pulse): No such file or directory
+The X11 connection broke (error 1). Did the X11 server die?
