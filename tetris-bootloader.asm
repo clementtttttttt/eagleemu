@@ -198,8 +198,14 @@ ret
 ; spawns a new piece. performance requirements are a bit more relaxed heres
 reset_tick:
 
+push ds
+
+mov cx, datSeg
+mov ds, cx
+
 
 mov cx, 4
+
 
 
 .set_playfield:
@@ -370,6 +376,8 @@ mov byte cs:[in_vsync],1
 
 
 mov byte [keybFlags], 0
+
+pop ds
 
 ret
 
@@ -1015,10 +1023,10 @@ mov ds, ax
 		cli
 	
 			mov byte CS:[in_vsync], 0
-pop dx
-pop cx
-pop di
-pop ax
+pop es
+pop bx
+pop ds
+pop si
 iret
 
 
