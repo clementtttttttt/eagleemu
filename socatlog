@@ -1,7 +1,7 @@
-2026/05/04 11:47:08 socat[202682] N PTY is /dev/pts/2
-2026/05/04 11:47:08 socat[202682] N PTY is /dev/pts/5
-2026/05/04 11:47:08 socat[202682] N starting data transfer loop with FDs [5,5] and [7,7]
-2026/05/04 11:48:48 socat[202682] N socat_signal(): handling signal 15
-2026/05/04 11:48:48 socat[202682] W exiting on signal 15
-2026/05/04 11:48:48 socat[202682] N socat_signal(): finishing signal 15
-2026/05/04 11:48:48 socat[202682] N exit(143)
+2026/05/04 11:49:58 socat[203043] N PTY is /dev/pts/2
+2026/05/04 11:49:58 socat[203043] N PTY is /dev/pts/5
+2026/05/04 11:49:58 socat[203043] N starting data transfer loop with FDs [5,5] and [7,7]
+2026/05/04 11:52:42 socat[203043] N socat_signal(): handling signal 15
+2026/05/04 11:52:42 socat[203043] W exiting on signal 15
+2026/05/04 11:52:42 socat[203043] N socat_signal(): finishing signal 15
+2026/05/04 11:52:42 socat[203043] N exit(143)

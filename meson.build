@@ -22,14 +22,14 @@ add_project_arguments(
 )
 
 sources = files(
-  '8255.c',
-  'cpu.c',
-  'gfx.c',
-  'keyb.c',
-  'main.c',
-  'saa1099_ext.c',
-  'sd.c',
-  'serial.c',
+  'src/8255.c',
+  'src/cpu.c',
+  'src/gfx.c',
+  'src/keyb.c',
+  'src/main.c',
+  'src/saa1099_ext.c',
+  'src/sd.c',
+  'src/serial.c',
 )
 
 executable('eagleemu', sources,
