@@ -31,7 +31,6 @@ SDL_Renderer *renderer;
    char *serdev_name=0;
     char *aqxe_name=0;
 
-const int CPU_FREQ = 6293750;
 void draw_text(uint8_t r,uint8_t g, uint8_t b, uint8_t a, char *text ,int x, int y, int sz,int wrap){
 
 
@@ -230,16 +229,6 @@ int main(int argc, char* argv[])
 
             sprintf(mhzstring, "%01.6lf MHZ %02d FPS %01.6lf MIPS",((double)ticks)*4*2/1000000, framei*4*2, ((double)ips)*4*2/1000000);
             frames = SDL_GetTicks();
-
-	   extern int in_hlt;
-	   	if(!in_hlt){
-            extern uint32_t waitloop_ticks;
-                waitloop_ticks += clamp(sinh(((int)ticks - (int)(CPU_FREQ/2/2/2))/69999),-10,10);
-                waitloop_ticks = clamp((int)waitloop_ticks, 0, DBL_MAX);
-		}
-
-           // printf("wait: %d\n",waitloop_ticks);
-
 
             framei = 0;
                         ticks=0;

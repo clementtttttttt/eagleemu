@@ -1740,7 +1740,8 @@ void cpu_hlt(){
     if(flags_reg.i == 0) { printf("WARNING: HLT BUT NO INTS\n");}
 
     while(inta){
-        usleep(0);
+        struct timespec ts = {0, 100000};
+        nanosleep(&ts, NULL);
     }
 
     in_hlt = 0;
@@ -2079,8 +2080,6 @@ char* cpu_dump_flags_debug(){
             return regstr;
 
 }
-unsigned long waitloop_ticks = 4;
-
 int cpu_do_reset = 0;
 
 void cpu_reset(){
@@ -2329,9 +2328,6 @@ void cpu_step()
 
         if(delay) --delay;
 
-                for(uint32_t i=0;i<waitloop_ticks;++i){
-                    asm("lfence");
-                }
                 ++ticks;
 
 
@@ -2376,7 +2372,6 @@ void cpu_init(){
     enable_rep = 0;
 
     memset(regs, 0, sizeof(uint16_t)*8);
-    waitloop_ticks =400;
 
     if(aqxe_name){
         printf("Attempting to load aqxe program %s\r\n",aqxe_name);
@@ -2437,6 +2432,9 @@ void cpu_init(){
 
 }
 
+#define CPU_FREQ 6293750
+#define BATCH_TICKS 10000
+
 void *system_func(){
 
 
@@ -2473,19 +2471,26 @@ void *system_func(){
 
     usleep(6000);
 
-    int cputicks=0;
+    long batch_target_ns = (long)((double)BATCH_TICKS * 1000000000.0 / CPU_FREQ);
+    struct timespec next_wake;
+    clock_gettime(CLOCK_MONOTONIC, &next_wake);
+
     char key_pop_buf();
     while(1){
-         if(cpu_do_reset){
-            cpu_init();
-            cpu_do_reset = 0;
+        for(long i = 0; i < BATCH_TICKS; ++i) {
+            if(cpu_do_reset){
+                cpu_init();
+                cpu_do_reset = 0;
+            }
+            cpu_step();
         }
-        cpu_step();
 
-
-        ++cputicks;
-
-
+        next_wake.tv_nsec += batch_target_ns;
+        if(next_wake.tv_nsec >= 1000000000L) {
+            next_wake.tv_sec++;
+            next_wake.tv_nsec -= 1000000000L;
+        }
+        clock_nanosleep(CLOCK_MONOTONIC, TIMER_ABSTIME, &next_wake, NULL);
     }
 
     return NULL;
